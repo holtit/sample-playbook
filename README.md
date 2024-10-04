@@ -1,2 +1,2 @@
 # sample-playbook
-hoge
+動作確認用
