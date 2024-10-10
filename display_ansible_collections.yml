@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  connection: localhost
+  gather_facts: false
+
+  tasks:
+    - name: debug command
+      ansible.builtin.command: 
+        cmd: 
+          - ansible-galaxy collection list
+      changed_when: false
+      failed_when: false
+      register: res_cmd_results
+
+    - name: display localhost detail
+      ansible.builtin.debug:
+        msg: "{{ res_cmd_results.stdout_lines }}"
