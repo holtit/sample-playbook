@@ -7,7 +7,7 @@
     - name: debug command
       ansible.builtin.command: 
         cmd: 
-          - ansible-galaxy collection list
+          - ansible-galaxy collection list -p .
       changed_when: false
       failed_when: false
       register: res_cmd_results
